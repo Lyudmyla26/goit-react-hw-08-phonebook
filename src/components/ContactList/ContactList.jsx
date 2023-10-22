@@ -11,7 +11,7 @@ import { selectFilter } from 'redux/filter/selectors';
 export const ContactList = () => {
   const contacts = useSelector(selectContacts);
 
-  const filter = useSelector(selectFilter);
+  const filter = useSelector(selectFilter).toLowerCase();
 
   const dispatch = useDispatch();
   const getContacts = () => {
@@ -19,7 +19,9 @@ export const ContactList = () => {
       return contacts.items;
     }
 
-    return contacts.items.filter(contact => contact.name.includes(filter));
+    return contacts.items.filter(contact =>
+      contact.name.toLowerCase().includes(filter)
+    );
   };
   const onDeleteContact = contactId => {
     dispatch(deleteContacts(contactId));
