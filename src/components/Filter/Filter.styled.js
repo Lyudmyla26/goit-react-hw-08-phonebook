@@ -10,7 +10,7 @@ export const LabelDescr = styled.label`
   padding-right: ${p => p.theme.space[4]}px;
 
   max-width: 100%;
-  width: 300px;
+  width: 500px;
 
   color: ${props => props.theme.colors.primary};
   text-shadow: ${props => props.theme.shadows.textShadow};
@@ -43,4 +43,3 @@ export const Input = styled.input`
   font-size: ${props => props.theme.fontSizes.s};
   letter-spacing: 1.4px;
 `;
-

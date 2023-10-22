@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik } from 'formik';
-import { nanoid } from '@reduxjs/toolkit';
+// import { nanoid } from '@reduxjs/toolkit';
 import * as yup from 'yup';
 import 'yup-phone';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
 import { IoMdPersonAdd } from 'react-icons/io';
@@ -73,7 +73,7 @@ export const ContactForm = () => {
       });
     }
     // dispatch(addContact({ id: nanoid(), name, number }));
-    const action = addContact({ id: nanoid(), name, number });
+    const action = addContact({ name, number });
     dispatch(action);
   };
   return (

@@ -4,17 +4,14 @@ import { IoPersonRemove } from 'react-icons/io5';
 import { Btn, Item, List } from './ContactList.styled';
 
 // redux
-import { deleteContacts, fetchContacts } from 'redux/operations';
-import { getFilteredContacts } from 'redux/selectors';
-import { useEffect } from 'react';
+import { deleteContacts } from '../../redux/contacts/operations';
+import { getFilteredContacts } from 'redux/contacts/selectors';
+// import { useEffect } from 'react';
 
 export const ContactList = () => {
   const contacts = useSelector(getFilteredContacts);
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   const onDeleteContact = contactId => {
     dispatch(deleteContacts(contactId));
