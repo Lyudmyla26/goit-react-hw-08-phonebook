@@ -12,8 +12,8 @@ const Contacts = () => {
   return (
     <div>
       <ContactForm />
-      <ContactList />
       <Filter />
+      <ContactList />
     </div>
   );
 };
