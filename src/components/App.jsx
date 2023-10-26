@@ -55,7 +55,7 @@ const App = () => {
               }
             />
 
-            <Route path="*" element={<HomePage />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Route>
         </Routes>
       )}
