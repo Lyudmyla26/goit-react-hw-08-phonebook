@@ -1,6 +1,6 @@
 import React from 'react';
 import { lazy, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectIsRefreshing } from '../redux/auth/selectors';
 import { PrivateRoute } from './PrivateRoute';
